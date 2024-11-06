@@ -2959,10 +2959,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stripe/stripe-react-native@^0.38.4":
-  version "0.38.4"
-  resolved "https://registry.npmjs.org/@stripe/stripe-react-native/-/stripe-react-native-0.38.4.tgz"
-  integrity sha512-uPLgr5tRC5GTmqqGdqteA2mbuR682QYHsjWAvqVe+creu1KOHm13VhP1FAbXybWCdgtPEQsDS5X8XEVWy5pN2A==
+"@stripe/stripe-react-native@^0.37.2":
+  version "0.37.2"
+  resolved "https://registry.npmjs.org/@stripe/stripe-react-native/-/stripe-react-native-0.37.2.tgz"
+  integrity sha512-dLM4jknWQEmqIAXgWpskwty6fL7EHpaW70P+75hVYrGasxMNEbZpdNQIN9SEUppULiyrMIeMp5NtksCZCcolUQ==
 
 "@tootallnate/once@2":
   version "2.0.0"
@@ -5164,6 +5164,13 @@ expo-linking@*, expo-linking@~6.3.0, expo-linking@~6.3.1:
   integrity sha512-xuZCntSBGWCD/95iZ+mTUGTwHdy8Sx+immCqbUBxdvZ2TN61P02kKg7SaLS8A4a/hLrSCwrg5tMMwu5wfKr35g==
   dependencies:
     expo-constants "~16.0.0"
+    invariant "^2.2.4"
+
+expo-local-authentication@^14.0.1, expo-local-authentication@>=13.5.0:
+  version "14.0.1"
+  resolved "https://registry.npmjs.org/expo-local-authentication/-/expo-local-authentication-14.0.1.tgz"
+  integrity sha512-kAwUD1wEqj1fhwQgIHlP4H/JV9AcX+NO3BJwhPM2HuCFS0kgx2wvcHisnKBSTRyl8u5Jt4odzMyQkDJystwUTg==
+  dependencies:
     invariant "^2.2.4"
 
 expo-location@~17.0.1:
@@ -9037,25 +9044,25 @@ react-native-animatable@1.3.3:
   dependencies:
     prop-types "^15.7.2"
 
-react-native-gesture-handler@^2.20.2:
-  version "2.20.2"
-  resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.20.2.tgz"
-  integrity sha512-HqzFpFczV4qCnwKlvSAvpzEXisL+Z9fsR08YV5LfJDkzuArMhBu2sOoSPUF/K62PCoAb+ObGlTC83TKHfUd0vg==
+react-native-gesture-handler@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.16.1.tgz"
+  integrity sha512-7AlZS2IWDPQylAYOQle2mI0Xs0omAd/Kr+gAy58hjS14LUhxZAwYMVxcSFMlN9PfzXomoNVhmJBapDWIWUw/NA==
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
+    lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-google-places-autocomplete@^2.5.7:
-  version "2.5.7"
-  resolved "https://registry.npmjs.org/react-native-google-places-autocomplete/-/react-native-google-places-autocomplete-2.5.7.tgz"
-  integrity sha512-yWEJ31gsRptStEZDele9no0J6Z+MxtNpQKKwjvGmFrWmpYDEAzpRtxy1Xq0u+ckMepJfrg/EU+OL5LgtMbnCDA==
+react-native-google-places-autocomplete@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.npmjs.org/react-native-google-places-autocomplete/-/react-native-google-places-autocomplete-2.5.6.tgz"
+  integrity sha512-Dy7mFKyEoiNeWPLd7HUkrI/SzJYe7GST55FGtiXzXDoPs05LYHIOCPrT9qFE51COh5X8kgDKm+f7D5aMY/aMbg==
   dependencies:
     lodash.debounce "^4.0.8"
     prop-types "^15.7.2"
     qs "~6.9.1"
-    uuid "^10.0.0"
 
 react-native-helmet-async@2.0.4:
   version "2.0.4"
@@ -10787,11 +10794,6 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
-
-uuid@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.npmjs.org/uuid/-/uuid-10.0.0.tgz"
-  integrity sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
 
 uuid@^7.0.3:
   version "7.0.3"

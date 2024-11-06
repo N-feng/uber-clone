@@ -25,6 +25,7 @@ const Map = () => {
   const { selectedDriver, setDrivers } = useDriverStore();
 
   const { data: drivers, loading, error } = useFetch<Driver[]>("/(api)/driver");
+  console.log('drivers: ', drivers);
   const [markers, setMarkers] = useState<MarkerData[]>([]);
 
   useEffect(() => {
