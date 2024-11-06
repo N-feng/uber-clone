@@ -11,6 +11,7 @@ const OAuth = () => {
 
   const handleGoogleSignIn = async () => {
     const result = await googleOAuth(startOAuthFlow);
+    console.log('result: ', result);
 
     if (result.code === "session_exists") {
       Alert.alert("Success", "Session exists. Redirecting to home screen.");

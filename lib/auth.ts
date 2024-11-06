@@ -66,7 +66,7 @@ export const googleOAuth = async (startOAuthFlow: any) => {
     return {
       success: false,
       code: err.code,
-      message: err?.errors[0]?.longMessage,
+      message: err?.errors?.[0]?.longMessage,
     };
   }
 };

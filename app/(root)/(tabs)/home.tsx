@@ -54,11 +54,12 @@ const Home = () => {
         latitude: location.coords?.latitude!,
         longitude: location.coords?.longitude!,
       });
+        console.log('address: ', address);
 
       setUserLocation({
         latitude: location.coords?.latitude,
         longitude: location.coords?.longitude,
-        address: `${address[0].name}, ${address[0].region}`,
+        address: address[0] && `${address[0].name}, ${address[0].region}`,
       });
     })();
   }, []);
