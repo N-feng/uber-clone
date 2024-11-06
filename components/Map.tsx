@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, Text, View } from "react-native";
+import { ActivityIndicator, Text, View, Platform } from "react-native";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 
@@ -13,7 +13,7 @@ import {
 import { useDriverStore, useLocationStore } from "@/store";
 import { Driver, MarkerData } from "@/types/type";
 
-const directionsAPI = process.env.EXPO_PUBLIC_DIRECTIONS_API_KEY;
+const directionsAPI = process.env.EXPO_PUBLIC_GOOGLE_API_KEY;
 
 const Map = () => {
   const {
@@ -25,7 +25,6 @@ const Map = () => {
   const { selectedDriver, setDrivers } = useDriverStore();
 
   const { data: drivers, loading, error } = useFetch<Driver[]>("/(api)/driver");
-  console.log('drivers: ', drivers);
   const [markers, setMarkers] = useState<MarkerData[]>([]);
 
   useEffect(() => {
@@ -89,7 +88,7 @@ const Map = () => {
       mapType="mutedStandard"
       showsPointsOfInterest={false}
       initialRegion={region}
-      showsUserLocation={true}
+      // showsUserLocation={true}
       userInterfaceStyle="light"
     >
       {markers.map((marker, index) => (

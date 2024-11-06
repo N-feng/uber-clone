@@ -31,7 +31,9 @@ export const tokenCache = {
 export const googleOAuth = async (startOAuthFlow: any) => {
   try {
     const { createdSessionId, setActive, signUp } = await startOAuthFlow({
-      redirectUrl: Linking.createURL("/(root)/(tabs)/home"),
+      redirectUrl: Linking.createURL("/(root)/(tabs)/home", {
+        scheme: "myapp",
+      }),
     });
 
     if (createdSessionId) {
@@ -59,14 +61,15 @@ export const googleOAuth = async (startOAuthFlow: any) => {
 
     return {
       success: false,
+      code: "success",
       message: "An error occurred while signing in with Google",
     };
-  } catch (err: any) {
-    console.error(err);
+  } catch (error: any) {
+    console.log(error);
     return {
       success: false,
-      code: err.code || err?.errors?.[0]?.code,
-      message: err?.errors?.[0]?.longMessage,
+      code: error.code,
+      message: error?.errors[0]?.longMessage,
     };
   }
 };
